@@ -1,0 +1,7 @@
+1,valid,2
+2,valid,200
+3,valid,3
+4,invalid,1
+5,valid,1
+6,valid,300
+7,valid,600
