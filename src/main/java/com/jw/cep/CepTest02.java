@@ -63,7 +63,10 @@ public class CepTest02 {
         AfterMatchSkipStrategy skipPastLastEvent = AfterMatchSkipStrategy.skipPastLastEvent();
 
         // 4. 丢弃起始在这个匹配的开始和第一个出现的名称为PatternName事件之间的所有部分匹配。
-        AfterMatchSkipStrategy skipToFirst = AfterMatchSkipStrategy.skipToFirst("b*");
+        AfterMatchSkipStrategy skipToFirst = AfterMatchSkipStrategy.skipToFirst("start");
+
+        // 5. 完成一个匹配之后，从指定的模式序列的最后一条记录开始作为寻找新匹配的第一条数据。
+        AfterMatchSkipStrategy skipToLast = AfterMatchSkipStrategy.skipToLast("start");
 
         Pattern<Event, Event> eventPattern = Pattern
                 .<Event>begin("start", skipToFirst)
